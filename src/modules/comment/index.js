@@ -1,1 +1,1 @@
-export { default as commentController } from './commnet.controller.js'
+export { default as commentController } from './comment.controller.js'

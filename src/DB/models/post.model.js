@@ -1,8 +1,9 @@
-import { DataTypes } from "sequelize";
+import { DataTypes, Model } from "sequelize";
 import { sequelize } from "../connection.db.js";
 
-export const postModel = sequelize.define(
-    "post",
+class Post extends Model {}
+
+Post.init(
     {
         title: {
             type: DataTypes.STRING,
@@ -14,7 +15,11 @@ export const postModel = sequelize.define(
         },
     },
     {
+        sequelize,
+        modelName: "post",
         timestamps: true,
         paranoid:true
     }
 );
+
+export const postModel = Post;

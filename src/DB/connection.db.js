@@ -17,7 +17,7 @@ export const bootStrapDB = async (app,port)=>{
         await sequelize.sync({alter:true})
         console.log("DB connected successfully!");
         
-        app.listen(port, () => console.log(`Example app listening on port port!`))
+        app.listen(port, () => console.log(`Example app listening on port !`))
     } catch (error) {
         console.log("Failed to connect to DB");
         process.exit(1)
