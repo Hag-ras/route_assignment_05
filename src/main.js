@@ -11,8 +11,8 @@ bootStrapDB(app,PORT)
 
 app.use(express.json())
 app.use('/users',userController)
-app.use('/comment',commentController)
-app.use('/post',postController)
+app.use('/comments',commentController)
+app.use('/posts',postController)
 
 app.use((req,res,next)=>{
     return res.status(404).json({message: "Not Found!"})

@@ -14,7 +14,7 @@ export const sequelize = new Sequelize(db_name,db_user,db_password,{
 export const bootStrapDB = async (app,port)=>{
     try {
         await sequelize.authenticate()
-        await sequelize.sync({alter:true})
+        await sequelize.sync({alter:false})
         console.log("DB connected successfully!");
         
         app.listen(port, () => console.log(`Example app listening on port !`))
