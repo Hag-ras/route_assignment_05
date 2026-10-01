@@ -1,0 +1,1 @@
+export { default as commentController } from './commnet.controller.js'
